@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RH Toolkit - Privacy Policy</title>
+  <title>RH Toolkit Stealth - Privacy Policy</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -42,85 +42,83 @@
 </head>
 
 <body>
-  <h1>Privacy Policy for RH Toolkit</h1>
-  <p><strong>Effective Date:</strong> March 13, 2026</p>
+  <h1>Privacy Policy for RH Toolkit Stealth</h1>
+  <p><strong>Effective Date:</strong> June 29, 2026</p>
   <p>
-    This Privacy Policy describes how the <strong>RH Toolkit</strong> Chrome Extension accesses, processes, and stores
+    This Privacy Policy describes how the <strong>RH Toolkit Stealth</strong> Chrome Extension accesses, processes, and stores
     data. By installing and using this extension, you agree to this policy. <strong>Please note: This extension operates
-      entirely locally on your device. We do not collect, transmit, or store any of your data on external
+      locally on your device. We do not collect, harvest, transmit, or store your RaterHub evaluation data or browsing history on external
       servers.</strong>
   </p>
   <h2>1. Data Access (Local Only)</h2>
   <p>
-    <strong>RH Toolkit</strong> is designed to provide Quality of Life improvements for RaterHub evaluators. To function
+    <strong>RH Toolkit Stealth</strong> is designed to provide Quality of Life improvements for evaluators while maintaining a zero-footprint environment. To function
     correctly, the extension needs to locally access and read:
   <ul>
-    <li><strong>User Settings and Preferences:</strong> Such as your defined alert settings, timer preferences, and
-      integration webhooks (e.g., Telegram or Discord URLs). These are read directly from your local browser storage.
+    <li><strong>User Settings and Preferences:</strong> Such as your defined alert settings, timer modes, and subscription status. These are read directly from your local browser storage.
     </li>
     <li><strong>Browsing Context on raterhub.com:</strong> The extension reads elements and page states strictly on
-      <code>https://*.raterhub.com/evaluation/*</code> (and related RaterHub domains) to detect task availability,
-      timers, and interact with the required UI elements as per your configuration. <strong>This reading happens
-        entirely within your browser and is never transmitted to us.</strong></li>
+      <code>https://*.raterhub.com/evaluation/*</code> (and related domains) to detect task availability and execute keyboard macros as per your configuration. <strong>This reading happens
+        entirely within your browser and is never transmitted to us or any third party.</strong></li>
   </ul>
-  We <strong>do not</strong> access personal identification information (names, emails, physical addresses), passwords,
-  or browsing history outside of the specified RaterHub domain.
+  We <strong>do not</strong> access personal identification information (names, physical addresses), passwords,
+  or browsing history outside of the specified evaluation domains.
   </p>
   <h2>2. Data Processing</h2>
   <p>
-    All operations and data processing occur <strong>strictly locally</strong> on your device (within your browser). The
+    All operations regarding your work and data processing occur <strong>strictly locally</strong> on your device (within your browser). The
     extension processes the page's HTML elements locally to:
   <ul>
-    <li>Auto-acquire tasks based on your settings.</li>
-    <li>Inject UI elements like timers and floating boxes.</li>
-    <li>Play local notification sounds when tasks are available or completed.</li>
-    <li>Trigger external webhook notifications if explicitly configured by the user.</li>
+    <li>Monitor active task timers invisibly.</li>
+    <li>Execute background keyboard macros based on your configured limits.</li>
+    <li>Play local notification sounds when tasks are available or timers are met.</li>
+    <li>Trigger external webhook notifications (Discord/Telegram) if explicitly configured by the user.</li>
   </ul>
-  No background remote processing servers, analytics tools, or AI services are used to analyze your evaluation data.
+  No background remote processing servers, analytics tools, DOM injections, or AI services are used to analyze your evaluation data.
   </p>
   <h2>3. Data Storage</h2>
   <p>
-    All necessary data to run the extension (your settings, preferences, and webhook links) is stored
+    All necessary data to run the extension (your settings and active task memory) is stored
     <strong>locally</strong> on your device using the Chrome browser's local storage API
     (<code>chrome.storage.local</code>).
   <ul>
     <li>We <strong>do not</strong> use remote servers, cloud databases, or any external services to store your personal
-      user preferences or settings.</li>
+      user preferences or task data.</li>
     <li>If you uninstall the extension or clear your browser data, this stored data will be permanently deleted from
       your device.</li>
   </ul>
   </p>
-  <h2>4. Data Sharing</h2>
+  <h2>4. Data Sharing & Third-Party Services</h2>
   <p>
-    Because we do not harvest or collect any data on our end, <strong>we cannot and do not sell, trade, rent, or share
-      any of your information with third parties</strong> for commercial, advertising, or any other purposes.
+    Because we do not harvest or collect any of your work data on our end, <strong>we cannot and do not sell, trade, rent, or share
+      any of your evaluation information with third parties</strong> for commercial, advertising, or any other purposes.
   </p>
   <p>
-    The only external network requests made by the extension occur strictly under the following user-configured
-    circumstances:
+    The only external network requests made by the extension occur strictly under the following circumstances:
   <ul>
     <li><strong>Webhooks to Third-Party Services (Telegram / Discord):</strong> If you manually configure the extension
       to send notifications via Telegram or Discord, the extension will send a payload (containing task notification
       context) directly from your browser to the API endpoints you provided (<code>https://api.telegram.org/*</code> or
       <code>https://discord.com/api/webhooks/*</code>).</li>
+    <li><strong>Payment Verification (ExtensionPay & Stripe):</strong> We use a trusted third-party service, ExtensionPay (powered by Stripe), to manage premium subscriptions. When you initiate or verify a subscription, the extension communicates securely with <code>https://extensionpay.com/*</code> to check your premium status based on your email address. ExtensionPay handles your login and payment information directly. The extension only stores a secure local token to verify your access. <strong>No browsing data or evaluation context is ever sent to ExtensionPay.</strong></li>
   </ul>
-  No other external network requests are made.
+  No other external network requests or analytics trackers are used.
   </p>
   <h2>5. Data Retention and Deletion</h2>
   <p>
-    We retain your locally stored settings for as long as the extension is installed on your device. All data is deleted immediately and permanently when you uninstall the extension or manually clear your browser's local storage/cache. We do not maintain any backups or copies of your data.
+    We retain your locally stored settings for as long as the extension is installed on your device. All data is deleted immediately and permanently when you uninstall the extension or manually clear your browser's local storage/cache.
   </p>
   <h2>6. Data Security</h2>
   <p>
-    We prioritize the security of your information. Since all data is stored locally within the Chrome storage environment, it benefits from the standard security sandboxing provided by Google Chrome. We recommend keeping your browser updated to ensure the latest security patches are active.
+    We prioritize the security of your information. Since all evaluation data is stored locally within the Chrome storage environment, it benefits from the standard security sandboxing provided by Google Chrome. We recommend keeping your browser updated to ensure the latest security patches are active.
   </p>
   <h2>7. User Rights and Choices</h2>
   <p>
-    You have full control over your data. You can view, modify, or delete your settings directly through the extension's interface or your browser settings. As no data is sent to our servers, you do not need to contact us to exercise your right to access or delete your data.
+    You have full control over your data. You can view, modify, or delete your settings directly through the extension's interface or your browser settings. As no evaluation data is sent to our servers, you do not need to contact us to exercise your right to access or delete your data.
   </p>
   <h2>8. Children's Privacy</h2>
   <p>
-    The <strong>RH Toolkit</strong> extension does not knowingly collect or solicit any information from children under the age of 13. If you believe that a child has provided us with personal information, please contact us immediately so we can take appropriate action.
+    The <strong>RH Toolkit Stealth</strong> extension does not knowingly collect or solicit any information from children under the age of 13.
   </p>
   <h2>9. Changes to This Policy</h2>
   <p>
@@ -132,7 +130,7 @@
     <strong>Email:</strong> golvek@gmail.com
   </p>
   <footer>
-    &copy; 2026 RH Toolkit. All rights reserved.
+    &copy; 2026 RH Toolkit Stealth. All rights reserved.
   </footer>
 </body>
 
